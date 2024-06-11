@@ -1,0 +1,38 @@
+package Arrays;
+
+import java.util.*;
+
+public class freqarray2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the size of your array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the elements");
+        for(int i =0;i<n;i++){
+            arr[i] = sc.nextInt();
+        }
+        int[][] freqarray = new int[100010][2];
+        for(int i =0; i<n;i++){
+            freqarray[arr[i]][0]++;
+            freqarray[arr[i]][1] = i;
+
+        }
+        System.out.println("Enter a positive number if you want to search for an element ");
+        int m = sc.nextInt();
+        while(m>0){
+            System.out.println("Enter the element you want to search for");
+            int c = sc.nextInt();
+            if(freqarray[c][0] > 0){
+                System.out.println("Element is present in the array at " +  (freqarray[c][1]));
+            }
+            else{
+                System.out.println("Element is not present in the array");
+            }
+            System.out.println("Enter a positive number if you want to search for another element ");
+            m = sc.nextInt();
+        }
+        System.out.println("Execution completed!!");
+        System.out.println("Thank You!!!");
+    }
+}
