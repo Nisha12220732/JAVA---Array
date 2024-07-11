@@ -1,0 +1,25 @@
+package Array_Questions;
+
+public class Next_greater_element {
+    public static int[] nextGreater(int[] ar){
+        int[] res= new int[ar.length];
+        for(int i =0;i<ar.length;i++){
+            int nextgreat = 0;
+            for(int j = i+1;j<ar.length;j++){
+                if(ar[j] > ar[i]){
+                    nextgreat = ar[j];
+                    break;
+                }
+            }
+            res[i] = nextgreat;
+        }
+        return res;
+    }
+    public static void main(String[] args) {
+        int[] arr = {1, 3, 2, 1, 8, 6, 3, 4};
+        int[] res = nextGreater(arr);
+        for (int i = 0; i < res.length; i++) {
+            System.out.print(res[i] + " ");
+        }
+    }
+}
