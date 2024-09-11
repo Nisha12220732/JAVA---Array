@@ -1,0 +1,53 @@
+package Arrays;
+import java.util.*;
+public class CharacterArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char[] cArray1 = {'a', 'b','c', 'd', 'e', 'f', 'i', 'g', 'h', 'j'};
+        char[] cArray2 = {'a', 'b','c', 'd', 'e', 'f', 'i', 'g', 'h', 'j'};
+        for (int i = 0; i < cArray1.length; i++) {
+            System.out.print(cArray1[i] + " ");
+        }
+        System.out.println();
+        if(Arrays.equals(cArray1,cArray2)){
+            System.out.println("The arrays are equal");
+        }
+        else{
+            System.out.println("The arrays are not equal");
+        }
+//        String to Character Array
+
+        String str = "Hello World";
+        System.out.println("My string is: "+ str);
+        char[] charArray = str.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            System.out.print(charArray[i] + " ");
+        }
+        System.out.println();
+        Arrays.sort(charArray);
+        for (int i = 0; i < charArray.length; i++) {
+            System.out.print(charArray[i] + " ");
+        }
+        System.out.println();
+
+//        Converting a CharacterArray to String
+        String str2 = new String(charArray);
+        System.out.println(str2);
+
+//        CopyOf function of Arrays for deep copy
+        char[] copiedarray = Arrays.copyOf(charArray,charArray.length);
+        for (int i = 0; i < copiedarray.length; i++) {
+            System.out.print(copiedarray[i] + " ");
+        }
+        System.out.println();
+
+//        CopyOfRange function of Arrays for deep copy
+        char[] copiedarray2 = Arrays.copyOfRange(charArray,2,6);
+        for (int i = 0; i < copiedarray2.length; i++) {
+            System.out.print(copiedarray2[i] + " ");
+        }
+        System.out.println();
+
+    }
+
+}
