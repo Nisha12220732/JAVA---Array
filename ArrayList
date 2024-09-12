@@ -1,0 +1,70 @@
+package ArrayList;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Scanner;
+
+public class Arraylist1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Integer> l1 = new ArrayList<>();
+
+//        Adding element at the end of the Arraylist
+        l1.add(1);
+        l1.add(23);
+        l1.add(2);
+        l1.add(3);
+        l1.add(4);
+        l1.add(32);
+        l1.add(28);
+
+//      Printing the size of ArrayList
+        System.out.println(l1.size());
+
+//      Accessing the elements of ArrayList
+        System.out.println(l1.get(0));
+        System.out.println(l1.get(4));
+
+//        2 ways to print Arraylist
+        for(int i =0;i<l1.size();i++){
+            System.out.print(l1.get(i) + " ");
+        }
+        System.out.println();
+        System.out.println(l1);
+
+//        Inserting at some index
+        l1.add(1,100);
+        l1.add(4,100);
+        l1.add(6,100);
+        System.out.println(l1);
+
+//        Modifying at some index
+        l1.set(8,100);
+        l1.set(9,100);
+        System.out.println(l1);
+
+//        Remove from some index
+        l1.remove(2);
+        System.out.println(l1);
+
+//        Removing some element by value
+//        Returns a boolean
+        l1.remove(Integer.valueOf(100));
+        System.out.println(l1);
+
+//        Contains function
+        System.out.println(l1.contains(Integer.valueOf(100)));
+
+//        IndexOf method
+        System.out.println(l1.indexOf(Integer.valueOf(100)));
+
+//        Last IndexOf method
+        System.out.println(l1.lastIndexOf(Integer.valueOf(100)));
+
+//        Is Empty
+        System.out.println(l1.isEmpty());
+
+
+
+    }
+}
